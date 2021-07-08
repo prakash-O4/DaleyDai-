@@ -19,6 +19,7 @@ class PropertyCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5.2),
       child: Container(
+        // height: 320,
         width: cardWidth,
         decoration: BoxDecoration(
           boxShadow: [
@@ -67,7 +68,7 @@ class PropertyCard extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 3,
+              height: 4,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15, top: 6),
@@ -83,18 +84,18 @@ class PropertyCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 4,
+                    height: 5,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Icon(
                         Icons.location_on,
-                        size: 10,
+                        size: 16,
                         color: Colors.black,
                       ),
                       SizedBox(
-                        width: 3,
+                        width: 2,
                       ),
                       Text(
                         houseFixLocation,
@@ -104,21 +105,18 @@ class PropertyCard extends StatelessWidget {
                           fontFamily: 'OpenSans',
                         ),
                       ),
-                      SizedBox(
-                        height: 5,
-                      ),
                     ],
                   ),
-                  Text(
-                    price,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'OpenSans',
-                      fontWeight: FontWeight.w700,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4, top: 4),
+                    child: Text(
+                      price,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'OpenSans',
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 7,
                   ),
                 ],
               ),

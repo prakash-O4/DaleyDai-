@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SecondTop extends StatelessWidget {
   final String imagePath;
@@ -7,7 +8,7 @@ class SecondTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(top: 12.0, bottom: 12, left: 7),
       child: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -15,7 +16,7 @@ class SecondTop extends StatelessWidget {
             Container(
               height: 93,
               width: 125,
-              padding: EdgeInsets.all(17),
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Color.fromRGBO(240, 242, 244, 1),
                 borderRadius: BorderRadius.circular(8),
@@ -42,14 +43,16 @@ class SecondTop extends StatelessWidget {
             SizedBox(
               height: 6,
             ),
-            Text(
-              bottomText,
-              style: TextStyle(
-                fontSize: 11,
-                color: Colors.black,
-                fontFamily: 'OpenSans',
-                fontWeight: FontWeight.w600,
-              ),
+            Expanded(
+              child: Text(bottomText,
+                  style: GoogleFonts.openSans(
+                    textStyle: TextStyle(
+                      fontSize: 11,
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  )),
             )
           ],
         ),

@@ -6,9 +6,10 @@ class CardListHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 318,
+      height: 325,
       padding: EdgeInsets.all(7),
       child: ListView.builder(
+        shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
         itemCount: propertyModel.length,

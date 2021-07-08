@@ -7,7 +7,7 @@ import 'package:text_field/text_field_constant.dart';
 class SellPropertyOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Text sellPropertyText(String headingText) {
+    Widget sellPropertyText(String headingText) {
       return Text(
         headingText,
         style: TextStyle(
@@ -20,8 +20,13 @@ class SellPropertyOne extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back,
+          ),
         ),
         title: Text(
           'SELL PROPERTY',
@@ -33,6 +38,7 @@ class SellPropertyOne extends StatelessWidget {
         ),
       ),
       body: Container(
+        height: MediaQuery.of(context).size.height,
         padding: EdgeInsets.only(
           top: 14,
           left: 7,
@@ -43,7 +49,7 @@ class SellPropertyOne extends StatelessWidget {
             MasterTextField(
               hintText: 'Enter Road Size',
             ),
-            MasterComboBox(),
+            // MasterComboBox(),
           ],
         ),
       ),

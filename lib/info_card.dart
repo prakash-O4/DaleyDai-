@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:text_field/constants.dart';
 
 class InfoCard extends StatelessWidget {
   final String mainText;
@@ -72,13 +71,19 @@ class InfoCard extends StatelessWidget {
               onPressed: () {
                 print('Easy Construction');
               },
-              child: Text(
-                buttonText,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                  fontFamily: 'OpenSans',
-                  fontWeight: FontWeight.w600,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 4.0,
+                  horizontal: 8,
+                ),
+                child: Text(
+                  buttonText,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontFamily: 'OpenSans',
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
               style: ElevatedButton.styleFrom(

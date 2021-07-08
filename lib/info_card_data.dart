@@ -12,7 +12,7 @@ class InfoCardData {
       this.buttonText});
 }
 
-List<InfoCardData> infoCardData = InfoCardModel.map(
+List<InfoCardData> infoCardData = infoCardModel.map(
   (item) => InfoCardData(
     mainText: item['mainText'],
     info: item['info'],
@@ -22,7 +22,7 @@ List<InfoCardData> infoCardData = InfoCardModel.map(
   ),
 ).toList();
 
-var InfoCardModel = [
+var infoCardModel = [
   {
     "mainText": "Searching For Resource ?",
     "info": "Find Resources",

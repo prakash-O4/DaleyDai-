@@ -26,7 +26,7 @@ class _TopBodyState extends State<TopBody> {
                 width: 120,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(kMainLogo),
+                    image: AssetImage(ImagePath.kMainLogo),
                   ),
                 ),
               ),
@@ -36,12 +36,15 @@ class _TopBodyState extends State<TopBody> {
                     widget.topButtonResponse();
                   });
                 },
-                child: Text(
-                  'SELL PROPERTY FREE',
-                  style: TextStyle(
-                    fontSize: 9,
-                    fontFamily: 'OpenSans',
-                    fontWeight: FontWeight.w600,
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(
+                    'SELL PROPERTY FREE',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontFamily: 'OpenSans',
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 //this changes the background color of button
@@ -77,7 +80,7 @@ class _TopBodyState extends State<TopBody> {
                       filled: true,
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(13),
+                        borderRadius: BorderRadius.circular(4),
                       ),
                       contentPadding: EdgeInsets.all(10),
                       focusColor: Colors.transparent,
