@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:text_field/property_card.dart';
-import 'package:text_field/property_sample.dart';
+import 'package:text_field/widgets/property_card.dart';
+import 'package:text_field/model/property_sample.dart';
 
 class CardListHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 325,
-      padding: EdgeInsets.all(7),
+      // padding: EdgeInsets.all(2),
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

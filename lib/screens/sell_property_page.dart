@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:text_field/constants.dart';
-import 'package:text_field/text_field_constant.dart';
+import 'package:text_field/widgets/text_field_constant.dart';
 
 class SellPropertyOne extends StatelessWidget {
   @override

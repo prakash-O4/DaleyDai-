@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:text_field/card_list_horizontal.dart';
+import 'package:text_field/widgets/card_list_horizontal.dart';
 import 'package:text_field/constants.dart';
-import 'package:text_field/info_card.dart';
-import 'package:text_field/property_card.dart';
-import 'package:text_field/search_page.dart';
-import 'package:text_field/second_body.dart';
-import 'package:text_field/second_body_data.dart';
-import 'package:text_field/sell_property_page.dart';
-import 'package:text_field/top_heading.dart';
+import 'package:text_field/widgets/info_card.dart';
+import 'package:text_field/widgets/property_card.dart';
+import 'package:text_field/screens/search_page.dart';
+import 'package:text_field/widgets/second_body.dart';
+import 'package:text_field/model/second_body_data.dart';
+import 'package:text_field/screens/sell_property_page.dart';
+import 'package:text_field/widgets/top_heading.dart';
 
 class DaleyBody extends StatefulWidget {
   @override

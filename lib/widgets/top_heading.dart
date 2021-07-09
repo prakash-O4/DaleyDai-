@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:text_field/constants.dart';
+import 'package:text_field/screens/recom_prop.dart';
 
 class TopBody extends StatefulWidget {
   final TextEditingController textInput;
@@ -102,11 +103,20 @@ class _TopBodyState extends State<TopBody> {
                   width: 15,
                 ),
                 // ),
-                Icon(
-                  Icons.menu,
-                  size: 25,
-                  color: Colors.black,
-                )
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RecommendedProp(),
+                        ),
+                      );
+                    },
+                    icon: Icon(
+                      Icons.menu,
+                      size: 25,
+                      color: Colors.black,
+                    ))
               ],
             ),
           ),

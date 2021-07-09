@@ -12,6 +12,14 @@ class ImagePath {
   static final String kHomeFive = 'images/home5.jpg';
 }
 
+class ColorConstant {
+  ColorConstant._();
+  static const int kCardColor = 0xFF252324;
+  static const int kMiniTextColor = 0xFF676767;
+  static const int kGrennButton = 0xFF4BC08B;
+  static const int kBorderColor = 0xFFDEDEDE;
+}
+
 final double kMainPadding = 14;
 final String kFontFamily = 'OpenSans';
 
@@ -45,8 +53,6 @@ Widget cardTag(String houseState, Color color) {
         style: TextStyle(
           color: Colors.white,
           fontSize: 10,
-          //  fontWeight: FontWeight.w500,
-          // fontFamily: 'OpenSans',
         ),
         textAlign: TextAlign.center,
       ),
@@ -54,10 +60,13 @@ Widget cardTag(String houseState, Color color) {
   );
 }
 
-
-
-        // color: Colors.black,
-        // fontSize: 20,
-        // fontFamily: 'OpenSans',
-        // fontStyle: FontStyle.normal,
-        // fontWeight: FontWeight.w300,
+class WidgetConstant {
+  WidgetConstant._();
+  static var border = BoxDecoration(
+    border: Border.all(
+      width: 0.9,
+      color: const Color(0xFFDEDEDE),
+    ),
+    borderRadius: BorderRadius.circular(5),
+  );
+}

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:text_field/constants.dart';
 import 'package:text_field/main.dart';
-import 'package:text_field/second_body.dart';
-import 'package:text_field/second_body_data.dart';
-import 'package:text_field/top_heading.dart';
+import 'package:text_field/widgets/second_body.dart';
+import 'package:text_field/model/second_body_data.dart';
+import 'package:text_field/widgets/top_heading.dart';
 
 class SearchPage extends StatelessWidget {
   final List placeName = [

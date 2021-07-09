@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:text_field/body.dart';
+import 'package:text_field/screens/details/details.dart';
 
 // color code of button #1E319D
 void main() {
@@ -22,9 +22,9 @@ class MyHomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: DaleyBody(),
-      ),
+      body: SafeArea(child: Details()
+          //DaleyBody(),
+          ),
     );
   }
 }

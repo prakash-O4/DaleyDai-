@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InfoCard extends StatelessWidget {
   final String mainText;
@@ -6,12 +7,13 @@ class InfoCard extends StatelessWidget {
   final String infoSec;
   final String cardImage;
   final String buttonText;
-  InfoCard(
-      {this.mainText,
-      this.infoSec,
-      this.info,
-      this.cardImage,
-      this.buttonText});
+  InfoCard({
+    @required this.mainText,
+    @required this.infoSec,
+    @required this.info,
+    @required this.cardImage,
+    @required this.buttonText,
+  });
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,14 +36,13 @@ class InfoCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              mainText,
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                fontFamily: 'OpenSans',
-              ),
-            ),
+            Text(mainText,
+                style: GoogleFonts.openSans(
+                    textStyle: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.normal,
+                ))),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -56,7 +57,14 @@ class InfoCard extends StatelessWidget {
                           fontFamily: 'OpenSans',
                         ),
                       ),
-                      TextSpan(text: infoSec),
+                      TextSpan(
+                        text: infoSec,
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'OpenSans',
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -67,28 +75,26 @@ class InfoCard extends StatelessWidget {
                 ),
               ],
             ),
-            ElevatedButton(
-              onPressed: () {
-                print('Easy Construction');
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 4.0,
-                  horizontal: 8,
+            Container(
+              width: 120,
+              child: ElevatedButton(
+                onPressed: () {
+                  print('Easy Construction');
+                },
+                child: Center(
+                  child: Text(buttonText,
+                      style: GoogleFonts.openSans(
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )),
                 ),
-                child: Text(
-                  buttonText,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontFamily: 'OpenSans',
-                    fontWeight: FontWeight.w600,
-                  ),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.all(12),
+                  primary: Color(0xFFED2028),
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(12),
-                primary: Color(0xFFED2028),
               ),
             ),
           ],
