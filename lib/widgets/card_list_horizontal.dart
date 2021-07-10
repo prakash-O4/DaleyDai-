@@ -6,22 +6,26 @@ class CardListHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 325,
-      // padding: EdgeInsets.all(2),
+      height: 330,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
+        physics: ClampingScrollPhysics(),
         itemCount: propertyModel.length,
-        itemBuilder: (context, index) => PropertyCard(
-          cardWidth: MediaQuery.of(context).size.width - 100,
-          houseState: propertyModel[index].houseState,
-          houseStateFlag: propertyModel[index].isRent,
-          houseFixLocation: propertyModel[index].houseFixLocation,
-          houseLocation: propertyModel[index].houseLocation,
-          imagePath: propertyModel[index].imagePath,
-          price: propertyModel[index].price,
-        ),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: PropertyCard(
+              cardWidth: MediaQuery.of(context).size.width - 100,
+              houseState: propertyModel[index].houseState,
+              houseStateFlag: propertyModel[index].isRent,
+              houseFixLocation: propertyModel[index].houseFixLocation,
+              houseLocation: propertyModel[index].houseLocation,
+              imagePath: propertyModel[index].imagePath,
+              price: propertyModel[index].price,
+            ),
+          );
+        },
       ),
     );
   }

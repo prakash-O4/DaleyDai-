@@ -8,6 +8,7 @@ import 'package:text_field/screens/details/details_widget.dart/details_card.dart
 import 'package:text_field/screens/details/details_widget.dart/first_card.dart';
 import 'package:text_field/screens/details/details_widget.dart/locality.dart';
 import 'package:text_field/screens/details/details_widget.dart/second_card.dart';
+import 'package:text_field/widgets/card_list_horizontal.dart';
 import 'package:text_field/widgets/info_card.dart';
 
 class Details extends StatelessWidget {
@@ -62,6 +63,7 @@ class Details extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   FirstCard(),
                   SizedBox(
@@ -102,6 +104,12 @@ class Details extends StatelessWidget {
                     height: 20,
                   ),
                   BankOffers(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  headingText("Recommended Properties"),
+                  SizedBox(height: 10),
+                  CardListHorizontal(),
                 ],
               ),
             ),

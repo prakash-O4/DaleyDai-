@@ -23,7 +23,11 @@ class BankOffers extends StatelessWidget {
                   child: Container(
                     height: 97,
                     width: 97,
-                    color: Colors.red,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(ImagePath.kMainLogo),
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -31,7 +35,11 @@ class BankOffers extends StatelessWidget {
                   child: Container(
                     height: 97,
                     width: 97,
-                    color: Colors.blue,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(ImagePath.kMainLogo),
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(width: 10),
@@ -39,7 +47,12 @@ class BankOffers extends StatelessWidget {
                   child: Container(
                     height: 97,
                     width: 97,
-                    color: Colors.green,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(ImagePath.kMainLogo),
+                        // fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ],

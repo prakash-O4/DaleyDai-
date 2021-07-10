@@ -32,7 +32,7 @@ var houseData = [
     "isRent": false,
     "houseState": "FOR RENT",
     "imagePath": "images/home3.jpg",
-    "houseLocation": "HOUSE SALE AT NEW ROAD",
+    "houseLocation": "HOUSE SALE AT NEW ROAD NEW ROAD",
     "houseFixLocation": "New Road, Kathmandu",
     "price": "Rs 10,00,000"
   },

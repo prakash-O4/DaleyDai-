@@ -16,7 +16,6 @@ class _TopBodyState extends State<TopBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
       child: Column(
         children: [
           Row(

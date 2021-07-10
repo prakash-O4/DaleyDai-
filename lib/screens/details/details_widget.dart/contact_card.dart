@@ -99,12 +99,14 @@ class ContactCard extends StatelessWidget {
                         //   width: 4,
                         // ),
                         Expanded(
-                          child: Text(
-                            "Contact",
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                          child: Center(
+                            child: Text(
+                              "Contact",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),

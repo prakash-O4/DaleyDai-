@@ -24,16 +24,14 @@ final double kMainPadding = 14;
 final String kFontFamily = 'OpenSans';
 
 Widget headingText(String heading) {
-  return Padding(
-    padding: EdgeInsets.only(left: kMainPadding),
-    child: Text(
-      heading,
-      style: GoogleFonts.openSans(
-        textStyle: TextStyle(
-          color: Colors.black,
-          fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w400,
-        ),
+  return Text(
+    heading,
+    style: GoogleFonts.openSans(
+      textStyle: TextStyle(
+        fontSize: 20,
+        color: Colors.black,
+        fontStyle: FontStyle.normal,
+        fontWeight: FontWeight.w400,
       ),
     ),
   );

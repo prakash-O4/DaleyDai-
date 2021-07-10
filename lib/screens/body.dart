@@ -21,7 +21,7 @@ class _DaleyBodyState extends State<DaleyBody> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(kMainPadding),
+        padding: const EdgeInsets.all(14),
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +53,7 @@ class _DaleyBodyState extends State<DaleyBody> {
               SizedBox(
                 height: 20,
               ),
-              headingText('Explore DaleyDai'),
+              headingText("Explore DaleyDai"),
               SizedBox(
                 height: 10,
               ),
@@ -74,47 +74,38 @@ class _DaleyBodyState extends State<DaleyBody> {
               ),
               headingText('Urgent Properties'),
               SizedBox(
-                height: 8,
+                height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 6),
-                child: PropertyCard(
-                  cardWidth: MediaQuery.of(context).size.width,
-                  houseStateFlag: true,
-                  houseState: 'FOR SALE',
-                  houseFixLocation: 'New Road',
-                  houseLocation: 'New Road',
-                  price: 'Rs 90,00,000',
-                  imagePath: ImagePath.kHomeThree,
-                ),
+              PropertyCard(
+                cardWidth: MediaQuery.of(context).size.width,
+                houseStateFlag: true,
+                houseState: 'FOR SALE',
+                houseFixLocation: 'New Road',
+                houseLocation: 'New Road',
+                price: 'Rs 90,00,000',
+                imagePath: ImagePath.kHomeThree,
               ),
               SizedBox(
                 height: 5,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 6.0),
-                child: PropertyCard(
-                  cardWidth: MediaQuery.of(context).size.width,
-                  houseStateFlag: false,
-                  houseState: 'FOR RENT',
-                  houseFixLocation: 'New Road',
-                  houseLocation: 'New Road',
-                  price: 'Rs 90,00,000',
-                  imagePath: ImagePath.kHomeThree,
-                ),
+              PropertyCard(
+                cardWidth: MediaQuery.of(context).size.width,
+                houseStateFlag: false,
+                houseState: 'FOR RENT',
+                houseFixLocation: 'New Road',
+                houseLocation: 'New Road',
+                price: 'Rs 90,00,000',
+                imagePath: ImagePath.kHomeThree,
               ),
               SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 6.0),
-                child: InfoCard(
-                  mainText: "Searching For Resource ?",
-                  info: "Find Resources",
-                  infoSec: "for Construction",
-                  cardImage: ImagePath.kMainLogo,
-                  buttonText: "Easy Construction",
-                ),
+              InfoCard(
+                mainText: "Searching For Resource ?",
+                info: "Find Resources",
+                infoSec: "for Construction",
+                cardImage: ImagePath.kMainLogo,
+                buttonText: "Easy Construction",
               ),
               SizedBox(
                 height: 10,
@@ -135,18 +126,12 @@ class _DaleyBodyState extends State<DaleyBody> {
               SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  bottom: 10,
-                ),
-                child: InfoCard(
-                  mainText: "Are you an owner or dealer ?",
-                  info: "Sell PROPERTY",
-                  infoSec: "for FREE",
-                  cardImage: ImagePath.kMainLogo,
-                  buttonText: "SELL PROPERTY",
-                ),
+              InfoCard(
+                mainText: "Are you an owner or dealer ?",
+                info: "Sell PROPERTY",
+                infoSec: "for FREE",
+                cardImage: ImagePath.kMainLogo,
+                buttonText: "SELL PROPERTY",
               ),
             ],
           ),
