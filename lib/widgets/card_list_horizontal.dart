@@ -7,6 +7,7 @@ class CardListHorizontal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 330,
+      color: Colors.white,
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

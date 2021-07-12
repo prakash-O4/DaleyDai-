@@ -36,6 +36,7 @@ class FirstCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Flexible(
                   child: IconAndText(
@@ -82,7 +83,7 @@ class FirstCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Container(
-              width: 86,
+              width: MediaQuery.of(context).size.width * 0.3,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Color(

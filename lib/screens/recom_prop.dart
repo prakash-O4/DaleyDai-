@@ -47,7 +47,7 @@ class RecommendedProp extends StatelessWidget {
                   "Sort Properties by Type",
                   style: GoogleFonts.openSans(
                     textStyle: TextStyle(
-                      fontSize: 12,
+                      fontSize: 15,
                       color: Color(ColorConstant.kCardColor),
                       fontWeight: FontWeight.w400,
                     ),

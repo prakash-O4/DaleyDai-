@@ -79,7 +79,7 @@ class InfoCard extends StatelessWidget {
             ],
           ),
           Container(
-            width: 140,
+            width: MediaQuery.of(context).size.width * 0.5,
             child: ElevatedButton(
               onPressed: () {
                 print('Easy Construction');

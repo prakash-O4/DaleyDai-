@@ -19,7 +19,7 @@ class ContactCard extends StatelessWidget {
               child: Container(
                 child: CircleAvatar(
                   backgroundColor: Color(0xFFE0595E),
-                  radius: 35,
+                  radius: 25,
                   child: Center(
                     child: Text(
                       "S",
@@ -78,41 +78,39 @@ class ContactCard extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 2,
-              child: Container(
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(
-                        ColorConstant.kGrennButton,
-                      ),
+              flex: 3,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(
+                      ColorConstant.kGrennButton,
                     ),
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        // Icon(
-                        //   Icons.call,
-                        //   color: Colors.white,
-                        //   size: 12,
-                        // ),
-                        // SizedBox(
-                        //   width: 4,
-                        // ),
-                        Expanded(
-                          child: Center(
-                            child: Text(
-                              "Contact",
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
+                  ),
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      // Icon(
+                      //   Icons.call,
+                      //   color: Colors.white,
+                      //   size: 12,
+                      // ),
+                      // SizedBox(
+                      //   width: 4,
+                      // ),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            "Contact",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
-                      ],
-                    )),
-              ),
+                      ),
+                    ],
+                  )),
             ),
           ],
         ),

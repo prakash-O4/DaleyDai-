@@ -8,6 +8,7 @@ import 'package:text_field/screens/details/details_widget.dart/details_card.dart
 import 'package:text_field/screens/details/details_widget.dart/first_card.dart';
 import 'package:text_field/screens/details/details_widget.dart/locality.dart';
 import 'package:text_field/screens/details/details_widget.dart/second_card.dart';
+import 'package:text_field/screens/details/details_widget.dart/top_image.dart';
 import 'package:text_field/widgets/card_list_horizontal.dart';
 import 'package:text_field/widgets/info_card.dart';
 
@@ -16,7 +17,6 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -24,7 +24,7 @@ class Details extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {
-            //Navigator.pop(context);
+            Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_sharp,
@@ -53,13 +53,7 @@ class Details extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: height * 0.3,
-              decoration: BoxDecoration(
-                color: Colors.grey,
-              ),
-            ),
+            TopImage(),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(

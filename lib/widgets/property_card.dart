@@ -17,111 +17,108 @@ class PropertyCard extends StatelessWidget {
       this.cardWidth});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // height: 320,
-      width: cardWidth,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.16),
-            blurRadius: 2,
-            spreadRadius: 2,
-          ),
-        ],
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-            ),
-            child: Container(
-              height: 209,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(imagePath),
-                  fit: BoxFit.cover,
-                  alignment: Alignment.center,
-                ),
+    return Card(
+      elevation: 0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Container(
+        // height: 320,
+        width: cardWidth,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
               ),
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    top: 10,
-                    left: 10,
-                    child: houseStateFlag == true
-                        ? cardTag(
-                            houseState,
-                            Color(0xFFEC1C24),
-                          )
-                        : cardTag(
-                            houseState,
-                            Color(0xFF276EF1),
-                          ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 4,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15, top: 6),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  houseLocation,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'OpenSans',
-                    fontWeight: FontWeight.w700,
+              child: Container(
+                height: 209,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(imagePath),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.center,
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Stack(
                   children: <Widget>[
-                    Icon(
-                      Icons.location_on,
-                      size: 16,
-                      color: Color(ColorConstant.kMiniTextColor),
+                    Positioned(
+                      top: 10,
+                      left: 10,
+                      child: houseStateFlag == true
+                          ? cardTag(
+                              houseState,
+                              Color(0xFFEC1C24),
+                            )
+                          : cardTag(
+                              houseState,
+                              Color(0xFF276EF1),
+                            ),
                     ),
-                    SizedBox(
-                      width: 2,
-                    ),
-                    Text(houseFixLocation,
-                        style: GoogleFonts.openSans(
-                          textStyle: TextStyle(
-                            fontSize: 11,
-                            color: Color(ColorConstant.kMiniTextColor),
-                            fontWeight: FontWeight.w400,
-                            fontStyle: FontStyle.normal,
-                          ),
-                        )),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 4, top: 4),
-                  child: Text(
-                    price,
+              ),
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15, top: 6),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    houseLocation,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16,
                       fontFamily: 'OpenSans',
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Icon(
+                        Icons.location_on,
+                        size: 16,
+                        color: Color(ColorConstant.kMiniTextColor),
+                      ),
+                      SizedBox(
+                        width: 2,
+                      ),
+                      Text(houseFixLocation,
+                          style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                              fontSize: 11,
+                              color: Color(ColorConstant.kMiniTextColor),
+                              fontWeight: FontWeight.w400,
+                              fontStyle: FontStyle.normal,
+                            ),
+                          )),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4, top: 4),
+                    child: Text(
+                      price,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'OpenSans',
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

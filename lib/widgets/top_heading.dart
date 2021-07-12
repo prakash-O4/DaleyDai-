@@ -21,12 +21,14 @@ class _TopBodyState extends State<TopBody> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Container(
-                height: 60,
-                width: 120,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(ImagePath.kMainLogo),
+              Flexible(
+                child: Container(
+                  height: 60,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(ImagePath.kMainLogo),
+                    ),
                   ),
                 ),
               ),
@@ -36,8 +38,7 @@ class _TopBodyState extends State<TopBody> {
                     widget.topButtonResponse();
                   });
                 },
-                child: Padding(
-                  padding: const EdgeInsets.all(4.0),
+                child: Center(
                   child: Text(
                     'SELL PROPERTY FREE',
                     style: TextStyle(
